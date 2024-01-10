@@ -34,7 +34,7 @@ function App() {
               <h3 className='title'>{story.title}</h3>
               <h4 className='author'>Escrito por {story.author}</h4>
               <h5 className='time'>Tempo de leitura: {story.readTime} minutos</h5>
-              <p className='content'>{story.content}</p>
+              <p className='content'><label className='e'>E</label>{story.content}</p>
             </div>
           )}
         </div>
