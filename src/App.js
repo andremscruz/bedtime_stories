@@ -25,16 +25,14 @@ function App() {
           <div className='button-container'>
             <button onClick={() => handleClick(index)}>
               <h3>{story.title}</h3>
-              <h5>Tempo: {story.readTime} min</h5>
+              <h5>Tempo de leitura: {story.readTime} min</h5>
             </button>
           </div>
 
           {visibleStories[index] && (
             <div>
-              <h3 className='title'>{story.title}</h3>
-              <h4 className='author'>Escrito por {story.author}</h4>
-              <h5 className='time'>Tempo de leitura: {story.readTime} minutos</h5>
               <p className='content'><label className='e'>E</label>{story.content}</p>
+              <h4 className='author'>Escrito por {story.author}</h4>
             </div>
           )}
         </div>
