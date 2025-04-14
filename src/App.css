@@ -2,20 +2,35 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-body {
+  }
+  
+  body {
     font-family: 'Roboto', sans-serif;
     background-color: #f8f8f8;
-}
-
-.button-container {
+  }
+  
+  /* Container around each story */
+  .story-container {
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  /* Button Wrapper */
+  .button-container {
     width: 80%;
     margin: 25px auto;
     text-align: center;
-}
-
-button {
+  }
+  
+  .button-container.active button {
+    background-color: #3e7982;
+  }
+  
+  /* Main Button */
+  button {
+    width: 100%;
     border: none;
     border-radius: 15px;
     padding: 12px 24px;
@@ -24,49 +39,78 @@ button {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-button:hover {
+    text-align: left;
+  }
+  
+  /* Hover Effects */
+  button:hover {
     background-color: #3e7982;
     transform: scale(1.05);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-}
-
- .author {
-    width: 80%;
-    margin: 5px auto;
-    text-align:right;
-    color: #333;
-}
-
-.content {
+  }
+  
+  /* Arrow & Title layout */
+  .title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Story Content Section */
+  .story-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    background-color: #fff;
+    border-radius: 0 0 15px 15px;
+  }
+  
+  /* Expanded state */
+  .story-content.expanded {
+    max-height: 1000px; /* large enough for most stories */
+    padding: 20px 0;
+  }
+  
+  /* Story Text */
+  .content {
     width: 80%;
     margin: 40px auto;
     text-align: justify;
     line-height: 1.6;
     color: #555;
-}
-@font-face {
+  }
+  
+  /* Author Label */
+  .author {
+    width: 80%;
+    margin: 5px auto;
+    text-align: right;
+    color: #333;
+  }
+  
+  /* Old English drop cap */
+  @font-face {
     font-family: "Old English";
-    src: url('./Holy\ Union.ttf') format("woff");
-    
-}
-.e{
-    font-family:'Old English';
-    font-size:xx-large;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
+    src: url('./Holy Union.ttf') format("woff");
+  }
+  
+  .e {
+    font-family: 'Old English';
+    font-size: xx-large;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
     .button-container {
-        width: 90%;
+      width: 90%;
     }
-
+  
     button {
-        width: 100%;
+      width: 100%;
     }
-
+  
     .title, .author, .time, .content {
-        width: 90%;
+      width: 90%;
     }
-}
+  }
+  
