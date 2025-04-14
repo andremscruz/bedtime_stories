@@ -67,7 +67,7 @@
   
   /* Expanded state */
   .story-content.expanded {
-    max-height: 1000px; /* large enough for most stories */
+    max-height: 1500px; /* large enough for most stories */
     padding: 20px 0;
   }
   
