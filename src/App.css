@@ -112,5 +112,13 @@
     .title, .author, .time, .content {
       width: 90%;
     }
+    .story-content.expanded {
+        max-height: none;
+        padding: 20px 0;
+      }
+    
+      .story-content {
+        transition: none; 
+      }
   }
   
